@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:meals_app/core/widgets/spacing_widgets.dart';
 
+import '../../features/home_screen/home_screen.dart';
 import '../../features/on_boarding_screen/on_boarding_screen.dart';
 import 'app_routes.dart';
 
@@ -19,7 +20,7 @@ class RouterGenerationConfig {
         path: AppRoutes.homeScreen,
         name: AppRoutes.homeScreen,
         builder: (context, state) {
-          return const WidthSpace(width: 2);
+          return const HomeScreen();
         },
       ),
       GoRoute(
