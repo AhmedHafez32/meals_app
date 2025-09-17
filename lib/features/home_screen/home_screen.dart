@@ -5,8 +5,38 @@ import 'package:meals_app/core/styles/app_styling.dart';
 import 'package:meals_app/core/widgets/spacing_widgets.dart';
 import 'package:meals_app/features/home_screen/widgets/custom_food_item_widget.dart';
 import 'package:meals_app/features/home_screen/widgets/custom_top_home_part_widget.dart';
+
+import 'model/food_model.dart';
+
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final List<FoodModel> foods = [
+    FoodModel(
+      image: AppAssets.item1image,
+      foodName: 'Cheese Burger',
+      rate: 4.9,
+      time: '20 - 30',
+    ),
+    FoodModel(
+      image: AppAssets.item2image,
+      foodName: 'Pasta',
+      rate: 4.8,
+      time: '10 - 20',
+    ),
+    FoodModel(
+      image: AppAssets.item3image,
+      foodName: 'Breakfast',
+      rate: 4.7,
+      time: '15 - 25',
+    ),
+    FoodModel(
+      image: AppAssets.item4image,
+      foodName: 'Fries',
+      rate: 4.6,
+      time: '18 - 28',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +72,15 @@ class HomeScreen extends StatelessWidget {
                     crossAxisCount: 2,
                     crossAxisSpacing: 22,
                     mainAxisSpacing: 22,
-                    childAspectRatio: 1.2,
+                    childAspectRatio: 0.8,
                   ),
                   itemBuilder: (context, index) {
+                    final food = foods[index];
                     return CustomFoodItemWidget(
-                      image: AppAssets.item1image,
-                      foodName: 'Cheese Burger',
-                      rate: 4.9,
-                      time: '20 - 30',
+                      image: food.image,
+                      foodName: food.foodName,
+                      rate: food.rate,
+                      time: food.time,
                       onTap: () {},
                     );
                   },
