@@ -109,7 +109,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     ),
                     DotsIndicator(
                       dotsCount: titles.length,
-                      position: currentIndexPage as double,
+                      position: currentIndexPage.toDouble(),
                       onTap: (index) {
                         cont.animateToPage(index);
                         currentIndexPage = index;

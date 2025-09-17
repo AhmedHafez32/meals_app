@@ -20,7 +20,7 @@ class RouterGenerationConfig {
         path: AppRoutes.homeScreen,
         name: AppRoutes.homeScreen,
         builder: (context, state) {
-          return const HomeScreen();
+          return HomeScreen();
         },
       ),
       GoRoute(

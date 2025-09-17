@@ -16,7 +16,7 @@ class CustomTopHomePartWidget extends StatelessWidget {
           height: 270,
         ),
         Positioned(
-          left: 80,
+          left: 20,
           top: 70,
           child: SizedBox(
             width: 200,
