@@ -5,7 +5,6 @@ import 'package:meals_app/core/styles/app_styling.dart';
 import 'package:meals_app/core/widgets/spacing_widgets.dart';
 import 'package:meals_app/features/home_screen/widgets/custom_food_item_widget.dart';
 import 'package:meals_app/features/home_screen/widgets/custom_top_home_part_widget.dart';
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
