@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meals_app/core/styles/app_colors.dart';
 import 'package:meals_app/core/styles/app_styling.dart';
 import 'package:meals_app/core/widgets/spacing_widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CustomFoodItemWidget extends StatelessWidget {
   const CustomFoodItemWidget({
@@ -23,6 +24,8 @@ class CustomFoodItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      splashColor: Colors.transparent,
+      //highlightColor: Colors.transparent,
       child: Container(
         //width: 153,
         //height: 176,
@@ -36,11 +39,14 @@ class CustomFoodItemWidget extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset(
-                image,
+              child: CachedNetworkImage(
                 height: 106,
                 width: 137,
                 fit: BoxFit.fitWidth,
+                imageUrl: image,
+                errorWidget:
+                    (_, url, error) =>
+                        const Icon(Icons.error, color: Colors.red),
               ),
             ),
             HeightSpace(height: 8),
