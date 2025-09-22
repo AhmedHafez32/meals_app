@@ -16,82 +16,84 @@ class MealDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: CachedNetworkImage(
-                      imageUrl: meal.image,
-                      fit: BoxFit.cover,
-                      width: double.infinity,
-                      height: 327,
-                    ),
-                  ),
-                  Positioned(
-                    left: 11.5,
-                    top: 17,
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border.all(color: AppColors.whiteColor),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: CachedNetworkImage(
+                        imageUrl: meal.image,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                        height: 327,
                       ),
-                      child: IconButton(
-                        onPressed: () {
-                          GoRouter.of(
-                            context,
-                          ).pushReplacement(AppRoutes.homeScreen);
-                        },
-                        icon: Icon(
-                          Icons.arrow_back_ios_new_sharp,
-                          size: 20,
-                          color: AppColors.whiteColor,
+                    ),
+                    Positioned(
+                      left: 11.5,
+                      top: 17,
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(color: AppColors.whiteColor),
+                        ),
+                        child: IconButton(
+                          onPressed: () {
+                            GoRouter.of(
+                              context,
+                            ).pushReplacement(AppRoutes.homeScreen);
+                          },
+                          icon: Icon(
+                            Icons.arrow_back_ios_new_sharp,
+                            size: 20,
+                            color: AppColors.whiteColor,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            const HeightSpace(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    meal.foodName,
-                    style: AppStyles.gray14Regular.copyWith(
-                      fontSize: 24,
-                      color: AppColors.blackColor,
+              const HeightSpace(height: 16),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      meal.foodName,
+                      style: AppStyles.gray14Regular.copyWith(
+                        fontSize: 24,
+                        color: AppColors.blackColor,
+                      ),
                     ),
-                  ),
-                  const HeightSpace(height: 21),
-                  CustomTimeRateWidget(
-                    mealRate: meal.rate.toString(),
-                    mealTime: meal.time,
-                  ),
-                  const HeightSpace(height: 27),
-                  Divider(color: Color(0xffEDEDED), thickness: 2),
-                  const HeightSpace(height: 24),
-                  Text(
-                    "Description",
-                    style: AppStyles.black16MediumStyle.copyWith(
-                      fontWeight: FontWeight.w600,
+                    const HeightSpace(height: 21),
+                    CustomTimeRateWidget(
+                      mealRate: meal.rate.toString(),
+                      mealTime: meal.time,
                     ),
-                  ),
-                  const HeightSpace(height: 8),
-                  Text(meal.description, style: AppStyles.gray14Regular),
-                ],
+                    const HeightSpace(height: 27),
+                    Divider(color: Color(0xffEDEDED), thickness: 2),
+                    const HeightSpace(height: 24),
+                    Text(
+                      "Description",
+                      style: AppStyles.black16MediumStyle.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const HeightSpace(height: 8),
+                    Text(meal.description, style: AppStyles.gray14Regular),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
