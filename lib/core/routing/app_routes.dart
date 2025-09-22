@@ -2,6 +2,5 @@ class AppRoutes{
   static const String onBoardingScreen = '/onBoardingScreen';
   static const String homeScreen = '/homeScreen';
   static const String addMealScreen = '/addMealScreen';
-  static const String changeListScreen = '/changeListScreen';
   static const String mealDetailsScreen = '/mealDetailsScreen';
 }

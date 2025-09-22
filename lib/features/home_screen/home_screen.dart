@@ -47,14 +47,10 @@ class HomeScreen extends StatelessWidget {
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
-                } else if (snapshot.data!.isEmpty) {
-                  return Center(
-                    child: Text(
-                      "No data found",
-                      style: AppStyles.black16MediumStyle,
-                    ),
-                  );
-                } else if (snapshot.hasData) {
+                }else if(snapshot.data!.isEmpty){
+                  return const Center(child: Text('No data found'),);
+                }
+                else if (snapshot.hasData) {
                   return Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -73,7 +69,12 @@ class HomeScreen extends StatelessWidget {
                             foodName: meal.foodName,
                             rate: meal.rate,
                             time: meal.time,
-                            onTap: () {},
+                            onTap: () {
+                              GoRouter.of(context).pushNamed(
+                                AppRoutes.mealDetailsScreen,
+                                extra: meal,
+                              );
+                            },
                           );
                         },
                       ),
