@@ -28,14 +28,14 @@ class RouterGenerationConfig {
         path: AppRoutes.mealDetailsScreen,
         name: AppRoutes.mealDetailsScreen,
         builder: (_,_) {
-          return const AddMealScreen();
+          return const WidthSpace(width: 2);
         },
       ),
       GoRoute(
         path: AppRoutes.addMealScreen,
         name: AppRoutes.addMealScreen,
         builder: (_,_) {
-          return const WidthSpace(width: 2);
+          return const AddMealScreen();
         },
       ),
       GoRoute(

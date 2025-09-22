@@ -16,17 +16,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dbHelper.insertMeal(
-      FoodModel(
-        image:
-            'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=700,636',
-        foodName: 'Recipes',
-        rate: 4.2,
-        description: 'delis Recipes',
-        time: '15-20',
-      ),
-    );
-
     return Scaffold(
       // floatingActionButtonAnimator: FloatingActionButtonAnimator.noAnimation,
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
