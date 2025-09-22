@@ -32,24 +32,6 @@ class _AddMealScreenState extends State<AddMealScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        // toolbarHeight: kToolbarHeight,
-        // titleSpacing: 0,
-        // leading: Container(
-        //   width: 10,
-        //   height: 10,
-        //   decoration: BoxDecoration(
-        //     borderRadius: BorderRadius.circular(50),
-        //     border: Border.all(
-        //       color: AppColors.grayColor.withOpacity(0.3),
-        //       width: 1,
-        //     ),
-        //   ),
-        //   child: Icon(
-        //     Icons.arrow_back_ios_new_sharp,
-        //     size: 20,
-        //     color: AppColors.blackColor,
-        //   ),
-        // ),
         title: Text('Add Meal', style: AppStyles.black16MediumStyle),
       ),
       body: Padding(
@@ -128,7 +110,7 @@ class _AddMealScreenState extends State<AddMealScreen> {
                         ),
                         HeightSpace(height: 8),
                         CustomTextField(
-                          controller: mealNameController,
+                          controller: descriptionController,
                           maxLines: 5,
                           validator: (val) {
                             if (val!.isEmpty) {
