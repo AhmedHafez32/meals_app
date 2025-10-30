@@ -75,6 +75,7 @@ A Flutter application to manage meals with onboarding, add meal functionality, m
    flutter run
 
 ## 📁 Project Structure
+```
 
 lib/
 ├── core/
@@ -120,7 +121,7 @@ lib/
 │       └── on_boarding_screen.dart
 │
 └── main.dart
-
+```
 
 ## 🎯 Features in Detail
 
