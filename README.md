@@ -147,7 +147,7 @@ Insert, fetch, and delete meals
 
 
 ## 🔧 Configuration
-
+```
 
 Dependencies used in pubspec.yaml
 dependencies:
@@ -162,7 +162,7 @@ dependencies:
   sqflite: ^2.4.2
   cached_network_image: ^3.4.1
 
-
+```
 ## 👨‍💻 Author
 
 **Ahmed Hafez**
