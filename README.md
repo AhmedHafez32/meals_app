@@ -19,28 +19,28 @@ A Flutter application to manage meals with onboarding, add meal functionality, m
 ### **🛠 Onboarding Screens**
 | Onboarding 1 | Onboarding 2 | Onboarding 3 |  
 |--------------|--------------|--------------|  
-| ![Onboarding 1](assets/screenshots/onboarding1.png) | ![Onboarding 2](assets/screenshots/onboarding2.png) | ![Onboarding 3](assets/screenshots/onboarding3.png) |  
+| ![Onboarding 1](assets/screenshots/onboarding1.jpeg) | ![Onboarding 2](assets/screenshots/onboarding2.jpeg) | ![Onboarding 3](assets/screenshots/onboarding3.jpeg) |  
 
 ---
 
-### **⚙️ Quiz Settings Screens**
-| Quiz Settings 1 | Quiz Settings 2                                          |  
+### **⚙️ Main Home Screens**
+| Main Home 1 | Main Home 2                                          |  
 |-----------------|----------------------------------------------------------|  
-| ![Quiz Settings 1](assets/screenshots/quiz_setting1.png) | ![Quiz Settings 2](assets/screenshots/quiz_setting2.png) |  
+| ![Main Home 1](assets/screenshots/homeScreen1.jpeg) | ![Main Home 2](assets/screenshots/homeScreen2.jpeg) |  
 
 ---
 
-### **📝 Quiz Screens**
-| Quiz Screen 1 | Quiz Screen 2                                         |  
-|--------------|-------------------------------------------------------|  
-| ![Quiz Screen 1](assets/screenshots/quiz_screen1.png) | ![Quiz Screen 2](assets/screenshots/quiz_screen2.png) |  
-
----
-
-### **🏆 Results Screen**
-| Results Screen                                   |  
+### **🏆 Add Meal Screen**
+| Add Meal Screen                                  |  
 |--------------------------------------------------|  
-| ![Results Screen](assets/screenshots/result.png) |  
+| ![Add Meal Screen](assets/screenshots/addMealScreen.jpeg) |  
+
+---
+
+### **🏆 Details Screen**
+| Details Screen                                            |  
+|-----------------------------------------------------------|  
+| ![Details Screen](assets/screenshots/detailesScreen.jpeg) |  
 
 
 ## 🛠️ Tech Stack
@@ -147,11 +147,12 @@ Insert, fetch, and delete meals
 
 ## 🔧 Configuration
 
+
+Dependencies used in pubspec.yaml
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  google_fonts: ^6.3.1
+    google_fonts: ^6.3.1
   go_router: ^16.2.1
   dots_indicator: ^4.0.1
   carousel_slider: ^5.1.1
@@ -159,7 +160,6 @@ dependencies:
   path: ^1.9.1
   sqflite: ^2.4.2
   cached_network_image: ^3.4.1
-
 
 
 ## 👨‍💻 Author
