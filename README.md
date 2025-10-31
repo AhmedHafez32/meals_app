@@ -2,6 +2,7 @@
 
 A Flutter application to manage meals with onboarding, add meal functionality, meal details, and local database integration using **Sqflite**.
 
+---
 
 ## 🌟 Features
 
@@ -13,6 +14,7 @@ A Flutter application to manage meals with onboarding, add meal functionality, m
 - **Reusable Widgets:** Custom text fields, buttons, spacing, and background image
 - **Clean Project Structure:** Core utilities separated from features
 
+---  
 
 ## 📸 Screenshots
 
@@ -42,6 +44,7 @@ A Flutter application to manage meals with onboarding, add meal functionality, m
 |-----------------------------------------------------------|  
 | ![Details Screen](assets/screenshots/detailesScreen.jpeg) |  
 
+---  
 
 ## 🛠️ Tech Stack
 
@@ -50,6 +53,7 @@ A Flutter application to manage meals with onboarding, add meal functionality, m
 - Database: **Sqflite**
 - Architecture: Feature-based + MVC
 
+---  
 
 ## 🚀 Getting Started
 
@@ -78,6 +82,9 @@ A Flutter application to manage meals with onboarding, add meal functionality, m
 ```bash
    flutter run
    ```
+
+---  
+
 ## 📁 Project Structure
 ```
 
@@ -127,6 +134,8 @@ lib/
 └── main.dart
 ```
 
+---  
+
 ## 🎯 Features in Detail
 
 **Onboarding**
@@ -149,6 +158,7 @@ Display rating widget
 Singleton pattern for DB
 Insert, fetch, and delete meals
 
+---  
 
 ## 🔧 Configuration
 ```
@@ -167,6 +177,9 @@ dependencies:
   cached_network_image: ^3.4.1
 
 ```
+
+---  
+
 ## 👨‍💻 Author
 
 **Ahmed Hafez**
